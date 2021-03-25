@@ -53,13 +53,13 @@ Vue.directive('dispatch', {
     },
   });
 
-  Vue.directive('render', {
+Vue.directive('render', {
     bind: function (el, binding, vnode) {
       el.innerText = vnode.context.$store.getters[binding.value] ?? vnode.context.$store.state[binding.value];
     },
     update: function (el, binding, vnode) {
       el.innerText = vnode.context.$store.getters[binding.value] ?? vnode.context.$store.state[binding.value];
     },
-  });
+});
 ```
 
